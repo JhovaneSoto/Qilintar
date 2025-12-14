@@ -43,12 +43,15 @@ Su nombre se basa en los **Qilin**, criatura mitológica de origen oriental, rel
 ![Prototipo_a](/assets/images/prototype_1.jpg)
 ![Prototipo_b](/assets/images/prototype_2.jpg)
 
+<<<<<<< HEAD
 ## Demostración
 <video width="480" controls>
   <source src="/assets/demostracion.mp4" type="video/mp4">
   Tu navegador no soporta videos HTML5.
 </video>
 
+=======
+>>>>>>> 6947da3cf2cde7afeef9d4eb8cfccea3da91d04b
 ## 📚 Documentación
 
 - [Visión general](/docs/01_vision_general.md)
