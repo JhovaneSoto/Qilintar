@@ -5,7 +5,7 @@ int CYCLE = 1000/5;
 
 //Definicion de ciclos Pomodoro
 int MAIN_CYCLE [] = {0,1,0,1,0,1,0,1,0,2};
-int TIME_PER_CYCLE [] = {20,5,30};
+int TIME_PER_CYCLE [] = {20*60, 5*60, 30*60};
 int COLORS_PER_CYCLE [][3] = {{HIGH,LOW,LOW},{LOW,HIGH,LOW},{LOW,LOW,HIGH}};
 
 //VALORES ACTUALES
@@ -20,9 +20,7 @@ int LAST_BUTTON = 0;
 //tiempo de parpadeo de led
 
 float ON_OFF_TIME = 0.8;
-
 float TIME_LEFT_LED = ON_OFF_TIME;
-
 int STATE_LED = HIGH;
 
 //Pines de entrada
@@ -37,11 +35,16 @@ int b_color = 26;
 
 int interruptor_led = 12;
 
+int buzzer = 14;
+//Tiempo que esta encendido el buzzer
+int TIME_BUZZER = 300;
+
 void setup() {
 
   pinMode(r_color,OUTPUT);
   pinMode(g_color,OUTPUT);
   pinMode(b_color,OUTPUT);
+  pinMode(buzzer,OUTPUT);
   pinMode(interruptor_led,OUTPUT);
 
   pinMode(button_stop, INPUT);
@@ -51,6 +54,8 @@ void setup() {
   digitalWrite(r_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][0]);
   digitalWrite(g_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][1]);
   digitalWrite(b_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][2]);
+
+  digitalWrite(buzzer,LOW);
 
   digitalWrite(interruptor_led,HIGH);
 
@@ -137,6 +142,12 @@ void actualizarCiclo(){
     digitalWrite(r_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][0]);
     digitalWrite(g_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][1]);
     digitalWrite(b_color,COLORS_PER_CYCLE[MAIN_CYCLE[CURRENT_CYCLE]][2]);
+
+    digitalWrite(buzzer,HIGH);
+    delay(TIME_BUZZER);
+    digitalWrite(buzzer,LOW);
+
+
 
   }
 
