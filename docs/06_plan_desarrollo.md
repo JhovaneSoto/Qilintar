@@ -2,8 +2,8 @@
 
 | Fase | Tarea | Estado |
 |------|--------|--------|
-| 1 | Diseño de circuito | 🔄 En progreso |
-| 2 | Prototipo en protoboard | ⏳ Pendiente  |
-| 3 | Programar firmware base | ⏳ Pendiente  |
-| 4 | Optimizar código y depurar | ⏳ Pendiente |
-| 5 | Documentar resultados | ⏳ Pendiente |
+| 1 | Diseño de circuito |  ☑️ Terminado |
+| 2 | Prototipo en protoboard | ☑️ Terminado |
+| 3 | Programar firmware base | ☑️ Terminado  |
+| 4 | Optimizar código y depurar | ☑️ Terminado |
+| 5 | Documentar resultados | ☑️ Terminado |

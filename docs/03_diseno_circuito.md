@@ -1,4 +1,4 @@
-﻿# Diseño del Circuito (Pendiente)
+﻿# Diseño del Circuito
 
 ## Esquema general
 El circuito conecta:
@@ -6,11 +6,13 @@ El circuito conecta:
 - Buzzer al pin D3.  
 - Pulsador al pin D2 con resistencia pull-down.
 
-## Diagrama (texto)
-[D2] ← Pulsador
-[D3] → Buzzer
-[D9-D11] → LED RGB
-[GND] → Común
-[+5V] → Alimentación
+## Diagrama
+### Asignación de pines en ESP32
+- [D34, D35, D32] ← Pulsadores
+- [D14] → Buzzer
+- [D33, D25, D26] → LED RGB
+- [GND] → Común
+- [VIN] → Alimentación
 
-*(Aquí puedes incluir un esquema exportado desde Fritzing o KiCad)*
+### Diagrama Final
+![Schematic](../pcb_design/final_schematic.SVG)
